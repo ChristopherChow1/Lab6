@@ -23,9 +23,14 @@ public class ShapeSorter
 	 */
 	public ShapeSorter()
 	{
+<<<<<<< HEAD
 		shapes = new ArrayList<Shape>();
 		//sortShapes();
 		
+=======
+		sortShapes();
+		sortShapes(comparator);
+>>>>>>> 16196480229a911509b44404cb6e03cbfa544968
 		// TODO: complete this...
 	}
 
@@ -75,11 +80,14 @@ public class ShapeSorter
 	@Override
 	public String toString()
 	{
+<<<<<<< HEAD
 		String shapeInfo = "";
 		for (int i = 0; i < shapes.size(); ++i) {
 			shapeInfo += shapes.get(i).toString();
 		}
 		return (shapeInfo);
+=======
+>>>>>>> 16196480229a911509b44404cb6e03cbfa544968
 		// TODO: complete this...
 	}
 

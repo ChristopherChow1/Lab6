@@ -69,7 +69,11 @@ public class Trapezoid extends Polygon
 	@Override
 	public String getShapeType()
 	{
+<<<<<<< HEAD
 		return "Trapezoid";
+=======
+		return "trapezoid";
+>>>>>>> 16196480229a911509b44404cb6e03cbfa544968
 		// TODO: complete this...
 	}
 
