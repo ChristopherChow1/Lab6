@@ -53,7 +53,7 @@ public class ShapeAreaComparator implements Comparator<Shape>
 	 */
 	public boolean equals(Shape s1, Shape s2)
 	{
-		if (s1.equals(s2)) {
+		if (s1.getArea() == s2.getArea()) {
 			return true;
 		} else {
 			return false;
