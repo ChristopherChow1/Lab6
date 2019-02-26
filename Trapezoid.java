@@ -56,9 +56,9 @@ public class Trapezoid extends Polygon
 		double e = (a + b) / 2;
 		double f = Math.pow(b - a, 2) + Math.pow(c, 2) - Math.pow(d, 2);
 		double g = 2 * c * (b - a);
-
+		double h = e * c * Math.sqrt(1 - Math.pow(f/g, 2));
 		// Calculate:
-		return e * c * Math.sqrt(1 - Math.pow(f/g, 2));
+		return h;
 	}
 
 	/**
@@ -69,11 +69,7 @@ public class Trapezoid extends Polygon
 	@Override
 	public String getShapeType()
 	{
-<<<<<<< HEAD
 		return "Trapezoid";
-=======
-		return "trapezoid";
->>>>>>> 16196480229a911509b44404cb6e03cbfa544968
 		// TODO: complete this...
 	}
 

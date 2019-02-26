@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -42,6 +44,20 @@ public class ShapeSorterTest
 	@Test
 	public void SortShapesDefaultTest()
 	{
+		ShapeSorter sorter = new ShapeSorter();
+
+		Shape a = new Rectangle("test", 3, 3);
+		Shape b = new EquilateralTriangle("test2", 4);
+		Shape c = new Square("test3", 3);
+		Shape d = new Circle("test4", 1.5);
+
+		sorter.addShape(a);
+		sorter.addShape(b);
+		sorter.addShape(c);
+		sorter.addShape(d);
+		ArrayList<Shape> defaultList = sorter.shapes;
+		
+		Assert.assertEquals(defaultList, sorter.shapes);
 		// TODO: complete this...
 	}
 
@@ -51,6 +67,18 @@ public class ShapeSorterTest
 	@Test
 	public void SortShapesAreaTest()
 	{
+		ShapeSorter sorter = new ShapeSorter();
+
+		Shape a = new Rectangle("test", 3, 3);
+		Shape b = new EquilateralTriangle("test2", 4);
+		Shape c = new Square("test3", 3);
+		Shape d = new Circle("test4", 1.5);
+
+		sorter.addShape(a);
+		sorter.addShape(b);
+		sorter.addShape(c);
+		sorter.addShape(d);
+		
 		// TODO: complete this...
 	}
 
