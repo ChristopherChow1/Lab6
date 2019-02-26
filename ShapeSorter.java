@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 
 /**
@@ -22,6 +23,8 @@ public class ShapeSorter
 	 */
 	public ShapeSorter()
 	{
+		sortShapes();
+		sortShapes(comparator);
 		// TODO: complete this...
 	}
 
@@ -32,6 +35,8 @@ public class ShapeSorter
 	 */
 	public void addShape(Shape s)
 	{
+		shapes.add(s);
+		
 		// TODO: complete this...
 	}
 
@@ -42,6 +47,7 @@ public class ShapeSorter
 	 */
 	public void sortShapes()
 	{
+		Collections.sort(shapes);
 		// TODO: complete this...
 	}
 
@@ -56,6 +62,7 @@ public class ShapeSorter
 	public void sortShapes(Comparator<Shape> comparator)
 	{
 		// TODO: complete this...
+		Collections.sort(shapes, comparator);
 	}
 
 	/**
