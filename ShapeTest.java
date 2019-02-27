@@ -189,10 +189,10 @@ public class ShapeTest
     public void NaturalCompareTest()
     {
 		Shape rect = new Rectangle("R1", 3.0,3.0);
-		Shape sqr = new Square("S1", 3.0);
+		Shape sqr = new Square("S1", 4.0);
 		sqr.compareTo(rect);
-		Assert.assertEquals("compareTo is not working",0,sqr.compareTo(rect));
-		Assert.assertEquals("compareTo is not working",0,rect.compareTo(sqr));
+		Assert.assertEquals("compareTo is not working",1,sqr.compareTo(rect));
+		Assert.assertEquals("compareTo is not working",-1,rect.compareTo(sqr));
 
 		// TODO: complete this...
     }

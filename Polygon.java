@@ -34,7 +34,7 @@ public abstract class Polygon extends Shape
     {
     	Double perimeter = 0.0;
     	for (int i = 0; i <sideLengths.size(); ++i) {
-    		perimeter = perimeter + sideLengths.get(i);
+    		perimeter += sideLengths.get(i);
     	}
     	return perimeter;
     	// TODO: complete this...
