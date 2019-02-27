@@ -78,7 +78,9 @@ public class ShapeSorterTest
 		sorter.addShape(b);
 		sorter.addShape(c);
 		sorter.addShape(d);
-		
+		ArrayList<Shape> defaultList = sorter.shapes;
+		sorter.sortShapes(new ShapeAreaComparator());
+		Assert.assertSame(defaultList,sorter.shapes);
 		// TODO: complete this...
 	}
 
@@ -88,6 +90,20 @@ public class ShapeSorterTest
 	@Test
 	public void SortShapesPerimeterTest()
 	{
+		ShapeSorter sorter = new ShapeSorter();
+
+		Shape a = new Rectangle("test", 3, 3);
+		Shape b = new EquilateralTriangle("test2", 4);
+		Shape c = new Square("test3", 3);
+		Shape d = new Circle("test4", 1.5);
+
+		sorter.addShape(a);
+		sorter.addShape(b);
+		sorter.addShape(c);
+		sorter.addShape(d);
+		ArrayList<Shape> defaultList = sorter.shapes;
+		sorter.sortShapes(new ShapePerimeterComparator());
+		Assert.assertSame(defaultList,sorter.shapes);
 		// TODO: complete this...
 	}
 
@@ -97,6 +113,19 @@ public class ShapeSorterTest
 	@Test
 	public void ToStringTest()
 	{
+		ShapeSorter sorter = new ShapeSorter();
+
+		Shape a = new Rectangle("test", 3, 3);
+		Shape b = new EquilateralTriangle("test2", 4);
+		Shape c = new Square("test3", 3);
+		Shape d = new Circle("test4", 1.5);
+
+		sorter.addShape(a);
+		sorter.addShape(b);
+		sorter.addShape(c);
+		sorter.addShape(d);
+		
+		Assert.assertEquals("Rectangle:	 ID = test	 area = 9.000 	 perimeter = 12.000 EquilateralTriangle:	 ID = test2	 area = 6.928 	 perimeter = 0.000 Square:	 ID = test3	 area = 9.000 	 perimeter = 12.000 Circle:	 ID = test4	 area = 7.069 	 perimeter = 9.425 ", sorter.toString());
 		// TODO: complete this...
 	}
 }
