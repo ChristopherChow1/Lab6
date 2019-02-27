@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -113,6 +115,7 @@ public class ShapeTest
 		Assert.assertEquals("Shape ID incorrect.", "Circle2", circ2.getId());
 		// TODO: complete this...
 	}
+
 
 	/**
 	 * Tests for Shape's toString().
